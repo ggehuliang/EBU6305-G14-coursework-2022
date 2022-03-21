@@ -1,0 +1,19 @@
+# EBU6305
+
+## Group Number: 2020EBU6305G14
+
+## Project Title: ***Awaiting the result of discussion***
+
+## Members:
+
+Liang Hu, 2019213314, 190897929, ggehuliang@gmail.com
+
+*Name, BUPT Student Number, QM Student Number, Email*
+
+*Name, BUPT Student Number, QM Student Number, Email*
+
+*Name, BUPT Student Number, QM Student Number, Email*
+
+*Name, BUPT Student Number, QM Student Number, Email*
+
+  ## Assigned TA: Chenwei Yan
