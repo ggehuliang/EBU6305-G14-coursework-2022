@@ -1,6 +1,6 @@
 # EBU6305
 
-## Group Number: 2020EBU6305G14
+## Group Number: 2022EBU6305G14
 
 ## Project Title: ***Awaiting the result of discussion***
 
