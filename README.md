@@ -2,7 +2,7 @@
 
 ## Group Number: 2022EBU6305G14
 
-## Project Title: ***Awaiting the result of discussion***
+## Project Title: Introduction of Shaanxi Museum
 
 ## Members:
 
@@ -16,6 +16,5 @@ Bo Du,          2019213329, 190897631, 1204964320@qq.com
 
 Boyang Xiao,    2019213326, 190899691, 3262148602@qq.com
 
-*Name, BUPT Student Number, QM Student Number, Email*
 
   ## Assigned TA: Chenwei Yan
