@@ -18,3 +18,6 @@ Boyang Xiao,    2019213326, 190899691, 3262148602@qq.com
 
 
   ## Assigned TA: Chenwei Yan
+
+---
+> For other info, see [交互大作业 技术文档 - 飞书云文档 (feishu.cn)](https://rith23ip8i.feishu.cn/docs/doccnEiMdBCdSso39JH5zN4vpvf#)
