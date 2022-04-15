@@ -11,74 +11,37 @@
     @@include('./components/nav.html',)
 
     <style>
-        .Exhibition {
+        .container{
             text-align: center;
-            margin: 0px auto;
         }
 
-        .tit {
-            margin: 40px 0px 8px 0px;
-            font-size: 52px;
-            color: rgb(127, 50, 34);
-            font-weight: bold;
-            height: 150px;
+        .mx-auto{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: 500;
         }
 
-        ul,
-        li {
-            display: inline-block;
-            list-style: none;
-        }
-
-        a {
+        a{
             color: #333;
             text-decoration: none;
         }
 
-        a:hover {
-            color: rgb(127, 50, 34)
+        a:hover{
+            color: rgb(127,50,34)
         }
 
-        .Exhibitions_list {
-
-            margin: 30px auto;
-            padding-left: 0px;
-            overflow: hidden;
+        img{
+            cursor:pointer;
+            transition:all 0.7s;
         }
 
-        .Exhibitions_list li {
-            width: 400px;
-            float: left;
-            margin-right: 100px;
-            border: 1px dashed rgb(127, 50, 34);
-        }
-
-        .Exhibitions_list li {
-            width: 400px;
-            float: left;
-            margin-right: 100px;
-        }
-
-        .list_pic img {
-            width: 398px;
-            vertical-align: top;
-        }
-
-        .Exhibitions_list .nomargin {
-            margin-right: 0px;
-        }
-
-        .list_tit {
-            font-size: 25px;
-            font-weight: normal;
-            text-align: center;
-            padding: 50px 5px 50px 5px;
-
+        img:hover{
+            transform:scale(1.05);
         }
 
         .button {
-            margin-right: 70px;
-            margin-left: 70px;
+
             width: 280px;
             height: 70px;
             border: #F0F0F0;
@@ -89,65 +52,77 @@
 
         .button_small {
 
-
-            margin-right: 70px;
-            margin-left: 70px;
-            width: 250px;
-            height: 50px;
+            width:250px;
+            height:50px;
             border: #F0F0F0;
             font-size: large;
             color: rgb(0, 0, 0);
             background-color: rgb(179, 177, 177);
         }
+
+        .zhanwei {
+            width:250px;
+            height:25px;
+            border: #F0F0F0;
+            font-size: large;
+            color: white;
+            background-color: white;
+        }
     </style>
 
-    <div class="Exhibitions">
-        <div class="Exhibition">
-            <h1 class="tit">Exhibitions</h1>
-            <div style="height: 150px;">
-                <button class="button"><strong>Permanent Exhibition</strong></button>
-                <button class="button"><strong>Special Exhibition</strong></button>
-                <button class="button"><strong>Thematic Exhibition</strong></button>
-                <button class="button"><strong>Virtual Exhibition</strong></button>
-                <br>
+    <div class="container">
+        <h1 c style="margin: 60px 0px; color: rgb(127,50,34)"><b>Exhibition<b></h1>
+        <div class="row g-3">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <button class="button"><strong>Permanent Exhibition</strong></button>
+                </div>
+                <div class="col-lg-3">
+                    <button class="button"><strong>Special Exhibition</strong></button>
+                </div>
+                <div class="col-lg-3">
+                    <button class="button"><strong>Thematic Exhibition</strong></button>
+                </div>
+                <div class="col-lg-3">
+                    <button class="button"><strong>Virtual Exhibition</strong></button>
+                </div>
             </div>
-            <ul class="Exhibitions_list">
-                <li>
-                    <div class="list_pic">
-                        <a href="#"><img src="resources/image/first_hall.jpg" alt="无法显示"
-                                title="The First Exhibition Hall"></a>
+            
+            <br><br><br>
+            <ul class="row g-3">
 
-                    </div>
-                    <div class="list_tit">
+                <div class="col-lg-4">
+                    <div style="border: 1px dashed rgb(127,50,34);">
+                        <a href="#"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"> </a>
+                        <h1 style="height: 20px;"></h1>
                         <button class="button_small">The First Exhibition Hall</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="list_pic">
-                        <a href="#"><img src="resources/image/second_hall.jpg" alt="无法显示"
-                                title="The Second Exhibition Hall"></a>
-                    </div>
-                    <div class="list_tit">
-                        <button class="button_small">The Second Exhibition Hall</button>
+                        <br>
+                        <!--这里为了让按钮上下居中，不知道该咋写了.....-->
+                        <button class="zhanwei">The First Exhibition Hall</button>
                     </div>
 
-                </li>
-                <li class="nomargin">
-                    <div class="list_pic">
-                        <a href="#"><img src="resources/image/third_hall.jpg" alt="无法显示"
-                                title="The Third Exhibition Hall"></a>
-                    </div>
-                    <div class="list_tit">
-                        <button class="button_small">The Third Exhibition Hall</button>
-                    </div>
-
-                </li>
-            </ul>
-
-        </div>
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/Gragon.png" alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small">The Second Exhibition Hall</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/Plate.png" alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small">The Third Exhibition Hall</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
     </div>
-    @@include('./components/footer.html')
 
+    @@include('./components/footer.html')
 </body>
 
 </html>
