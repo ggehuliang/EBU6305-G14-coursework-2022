@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  @@include('./components/common-head.html')
-  <title>Shaanxi Museum Intro</title>
+    @@include('./components/common-head.html')
+    <title>Shaanxi Museum Intro</title>
 
-<!-- <style>
+    <!-- <style>
     #back_top{
         display: block;
         width: 60px;
@@ -33,56 +33,65 @@
 </head>
 
 <body>
-  @@include('./components/nav.html',{
-  "nowActived":""
-  })
+    @@include('./components/nav.html')
 
     <style>
-        .Collection{
+        .Collection {
             text-align: center;
             margin: 0px auto;
         }
-        .tit{
+
+        .tit {
             margin: 40px 0px 8px 0px;
             font-size: 52px;
-            color: rgb(127,50,34);
+            color: rgb(127, 50, 34);
             font-weight: bold;
         }
-        ul,li{
+
+        ul,
+        li {
             display: inline-block;
             list-style: none;
         }
-        a{
+
+        a {
             color: #333;
             text-decoration: none;
         }
-        a:hover{
-            color: rgb(127,50,34)
+
+        a:hover {
+            color: rgb(127, 50, 34)
         }
-        .Collections_list{
+
+        .Collections_list {
             margin: 30px auto;
             padding-left: 0px;
             overflow: hidden;
         }
-        .Collections_list li{
+
+        .Collections_list li {
             width: 400px;
             float: left;
             margin-right: 100px;
-            border: 1px dashed rgb(127,50,34);
+            border: 1px dashed rgb(127, 50, 34);
         }
-        .Collections_list li{
+
+        .Collections_list li {
             width: 400px;
             float: left;
             margin-right: 100px;
         }
-        .list_pic img{
+
+        .list_pic img {
             width: 398px;
             vertical-align: top;
         }
-        .Collections_list .nomargin{
+
+        .Collections_list .nomargin {
             margin-right: 0px;
         }
-        .list_tit{
+
+        .list_tit {
             font-size: 25px;
             font-weight: normal;
             text-align: center;
@@ -91,54 +100,6 @@
             overflow: hidden;
             white-space: nowrap;
         }
-        /* 页面缩小原布局不变，可以拖动滚动条控制 */
-        body{
-            margin:0px;
-            width:100%;
-            min-width:1500px;
-            max-width:100%;
-            height:100%;
-            background-color:#F0F0F0;
-        }
-        #head{
-            background-color:#FFFF00;
-            width:100%;
-            height:100px;
-        }
-        #center{
-            background-color:#00FFFF;
-            width:100%;
-            min-height:100%;
-        }
-        #foot{
-            background-color:#FF00FF;
-            width:100%;
-            height:100px;
-        }
-        #back_top{ 
-            display:block;  
-            width:60px; 
-            height:60px;
-            position:fixed;  
-            bottom:50px;  
-            right:40px; 
-            border-radius:10px 10px 10px 10px;   
-            text-decoration:none;  
-            display:none;  
-            background-color:#999999;     
-        }
-        #back_top span{ 
-            display:block; 
-            width:60px; 
-            color:#dddddd; 
-            font-size:40px; 
-            text-align:center; 
-            margin-top:4px;
-        } 
-        #back_top span:hover{ 
-            color:#cccccc; 
-        } 
-
     </style>
     <!-- Collections -->
     <div class="Collections">
@@ -147,65 +108,55 @@
             <ul class="Collections_list">
                 <li>
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"></a>
+                        <a href="#"><img src="resources/image/Tiger.png" alt="无法显示"
+                                title="Bronze Tiger-Shaped Tally of Du County"></a>
                     </div>
                     <h4 class="list_tit"><a href="#">Bronze Tiger-Shaped Tally of Du County</a></h4>
                 </li>
                 <li>
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/Gragon.png" alt="无法显示" title="Gold Dragons in Running Position"></a>
+                        <a href="#"><img src="resources/image/Gragon.png" alt="无法显示"
+                                title="Gold Dragons in Running Position"></a>
                     </div>
                     <h4 class="list_tit"><a href="#">Gold Dragons in Running Position</a></h4>
                 </li>
                 <li class="nomargin">
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/Plate.png" alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"></a>
+                        <a href="#"><img src="resources/image/Plate.png" alt="无法显示"
+                                title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"></a>
                     </div>
-                    <h4 class="list_tit"><a href="#">Gilt Silver Plate in Double-Peach Shape with Double-Fox Design</a></h4>
+                    <h4 class="list_tit"><a href="#">Gilt Silver Plate in Double-Peach Shape with Double-Fox Design</a>
+                    </h4>
                 </li>
             </ul>
 
             <ul class="Collections_list">
                 <li>
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/Ladle.png" alt="无法显示" title="Ladle with A Sheep-Head-Shaped Handle"></a>
+                        <a href="#"><img src="resources/image/Ladle.png" alt="无法显示"
+                                title="Ladle with A Sheep-Head-Shaped Handle"></a>
                     </div>
                     <h4 class="list_tit"><a href="#">Ladle with A Sheep-Head-Shaped Handle</a></h4>
                 </li>
                 <li>
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/Sword.png" alt="无法显示" title="Sword with A Horse-Head-Shaped Handle"></a>
+                        <a href="#"><img src="resources/image/Sword.png" alt="无法显示"
+                                title="Sword with A Horse-Head-Shaped Handle"></a>
                     </div>
                     <h4 class="list_tit"><a href="#">Sword with A Horse-Head-Shaped Handle</a></h4>
                 </li>
                 <li class="nomargin">
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/Pot.png" alt="" title="Celadon Pot With A Loop HandleBottom In-let"></a>
+                        <a href="#"><img src="resources/image/Pot.png" alt=""
+                                title="Celadon Pot With A Loop HandleBottom In-let"></a>
                     </div>
                     <h4 class="list_tit"><a href="#">Celadon Pot With A Loop HandleBottom In-let</a></h4>
                 </li>
             </ul>
         </div>
     </div>
-    <!-- 点击快速返回页面顶部 -->
-    <div id="article">
-        <a id="back_top" href="script:;"><span>⌆</span></a>
-    </div>
-    <script>
-        $(function(){
-            $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
-                var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
-                if( scrollt >100 ){  //判断滚动后高度超过100px,就显示  
-                    $("#back_top").fadeIn(400); //淡出     
-                }else{      
-                     $("#back_top").stop().fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动   
-                }
-        });
-            $("#back_top").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部
-                $("html,body").animate({scrollTop:"0px"},200);
-            });
-        });
-    </script>
+
+    @@include('./components/footer.html')
 
 </body>
 

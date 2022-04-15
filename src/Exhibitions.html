@@ -2,141 +2,103 @@
 <html lang="en">
 
 <head>
-  @@include('./components/common-head.html')
-  <title>Shaanxi Museum Intro</title>
+    @@include('./components/common-head.html')
+    <title>Shaanxi Museum Intro</title>
 
 </head>
 
 <body>
-  @@include('./components/nav.html',{
-  "nowActived":""
-  })
+    @@include('./components/nav.html',)
 
     <style>
-        .Exhibition{
+        .Exhibition {
             text-align: center;
             margin: 0px auto;
         }
-        .tit{
+
+        .tit {
             margin: 40px 0px 8px 0px;
             font-size: 52px;
-            color: rgb(127,50,34);
+            color: rgb(127, 50, 34);
             font-weight: bold;
             height: 150px;
         }
-        ul,li{
+
+        ul,
+        li {
             display: inline-block;
             list-style: none;
         }
-        a{
+
+        a {
             color: #333;
             text-decoration: none;
         }
-        a:hover{
-            color: rgb(127,50,34)
+
+        a:hover {
+            color: rgb(127, 50, 34)
         }
-        .Exhibitions_list{
-         
+
+        .Exhibitions_list {
+
             margin: 30px auto;
             padding-left: 0px;
             overflow: hidden;
         }
-        .Exhibitions_list li{
+
+        .Exhibitions_list li {
             width: 400px;
             float: left;
             margin-right: 100px;
-            border: 1px dashed rgb(127,50,34);
+            border: 1px dashed rgb(127, 50, 34);
         }
-        .Exhibitions_list li{
+
+        .Exhibitions_list li {
             width: 400px;
             float: left;
             margin-right: 100px;
         }
-        .list_pic img{
+
+        .list_pic img {
             width: 398px;
             vertical-align: top;
         }
-        .Exhibitions_list .nomargin{
+
+        .Exhibitions_list .nomargin {
             margin-right: 0px;
         }
-        .list_tit{
+
+        .list_tit {
             font-size: 25px;
             font-weight: normal;
             text-align: center;
             padding: 50px 5px 50px 5px;
-         
+
         }
-        .button{
-            margin-right:70px;
-            margin-left:70px;
-            width:280px;
-            height:70px;
+
+        .button {
+            margin-right: 70px;
+            margin-left: 70px;
+            width: 280px;
+            height: 70px;
             border: #F0F0F0;
             font-size: x-large;
             color: rgb(0, 0, 0);
-            background-color:rgb(179, 177, 177);
+            background-color: rgb(179, 177, 177);
         }
 
-        .button_small{
+        .button_small {
 
-            
-            margin-right:70px;
-            margin-left:70px;
-            width:250px;
-            height:50px;
+
+            margin-right: 70px;
+            margin-left: 70px;
+            width: 250px;
+            height: 50px;
             border: #F0F0F0;
             font-size: large;
             color: rgb(0, 0, 0);
-            background-color:rgb(179, 177, 177);
+            background-color: rgb(179, 177, 177);
         }
-        /* 页面缩小原布局不变，可以拖动滚动条控制 */
-        body{
-            margin:0px;
-            width:100%;
-            min-width:2000px;
-            max-width:100%;
-            height:100%;
-            background-color:#F0F0F0;
-        }
-        #head{
-            background-color:#FFFF00;
-            width:100%;
-            height:100px;
-        }
-        #center{
-            background-color:#00FFFF;
-            width:100%;
-            min-height:100%;
-        }
-        #foot{
-            background-color:#FF00FF;
-            width:100%;
-            height:100px;
-        }
-        #back_top{ 
-            display:block;  
-            width:60px; 
-            height:60px;
-            position:fixed;  
-            bottom:50px;  
-            right:40px; 
-            border-radius:10px 10px 10px 10px;   
-            text-decoration:none;  
-            display:none;  
-            background-color:#999999;     
-        }
-        #back_top span{ 
-            display:block; 
-            width:60px; 
-            color:#dddddd; 
-            font-size:40px; 
-            text-align:center; 
-            margin-top:4px;
-        } 
-        #back_top span:hover{ 
-            color:#cccccc; 
-        } 
-
     </style>
 
     <div class="Exhibitions">
@@ -148,62 +110,43 @@
                 <button class="button"><strong>Thematic Exhibition</strong></button>
                 <button class="button"><strong>Virtual Exhibition</strong></button>
                 <br>
-            </div>  
+            </div>
             <ul class="Exhibitions_list">
                 <li>
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/first_hall.jpg" alt="无法显示" title="The First Exhibition Hall"></a>
-                        
+                        <a href="#"><img src="resources/image/first_hall.jpg" alt="无法显示"
+                                title="The First Exhibition Hall"></a>
+
                     </div>
                     <div class="list_tit">
-                    <button class="button_small">The First Exhibition Hall</button>
+                        <button class="button_small">The First Exhibition Hall</button>
                     </div>
                 </li>
                 <li>
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/second_hall.jpg" alt="无法显示" title="The Second Exhibition Hall"></a>
+                        <a href="#"><img src="resources/image/second_hall.jpg" alt="无法显示"
+                                title="The Second Exhibition Hall"></a>
                     </div>
                     <div class="list_tit">
                         <button class="button_small">The Second Exhibition Hall</button>
                     </div>
-                 
+
                 </li>
                 <li class="nomargin">
                     <div class="list_pic">
-                        <a href="#"><img src="resources/image/third_hall.jpg" alt="无法显示" title="The Third Exhibition Hall"></a>
+                        <a href="#"><img src="resources/image/third_hall.jpg" alt="无法显示"
+                                title="The Third Exhibition Hall"></a>
                     </div>
                     <div class="list_tit">
                         <button class="button_small">The Third Exhibition Hall</button>
                     </div>
-        
+
                 </li>
             </ul>
 
         </div>
     </div>
-    <!-- 点击快速返回页面顶部 -->
-    <div id="article">
-        <a id="back_top" href="script:;"><span>⌆</span></a>
-    </div>
-
-    <script>
-		var bth = document.getElementById("btn");
-		
-		// 第一种  通过方法响应点击事件
-		function bth() {
-			alert("点击事件");
-		}
-		
-		//第二种 通过点击事件
-		bth.onclick = function () {
-			alert('点击事件');
-		}
-		
-		//第三种 监听点击事件
-		bth.addEventListener('click', function () {
-			alert('点击事件');
-		})	
-	</script>
+    @@include('./components/footer.html')
 
 </body>
 

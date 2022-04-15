@@ -1,45 +1,39 @@
 <header class="p-3 mb-3 border-bottom">
-    <div class="container" >
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <div class="container">
+        <div class="d-flex flex-wrap gx-5 align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none ">
                 <img src="resources/image/logo-red.png" width="32" height="32" />
             </a>
 
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a class="btn btn-primary" href="index.html" role="button" style="background-color:rgb(127,50,34)">Home</a>
+            <ul class="nav gx-5 col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a class="btn btn-primary" href="index.html" role="button" id="index"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Home</a>
                 </li>
-                <li><a class="btn btn-primary" href="Visiting.html" role="button"
-                        style="background-color:rgb(127,50,34)">Visiting</a></li>
-                <li><a class="btn btn-primary" href="Exhibitions.html" role="button"
-                        style="background-color:rgb(127,50,34)">Exhibitions</a></li>
-                <li><a class="btn btn-primary" href="Collections.html" role="button"
-                        style="background-color:rgb(127,50,34)">Collections</a></li>
+                <li><a class="btn btn-primary" href="Visiting.html" role="button" id="Visiting"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Visiting</a></li>
+                <li><a class="btn btn-primary" href="Exhibitions.html" role="button" id="Exhibitions"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Exhibitions</a></li>
+                <li><a class="btn btn-primary" href="Collections.html" role="button" id="Collections"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Collections</a></li>
             </ul>
 
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                 <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
             </form>
 
-            <div class="dropdown">
-                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <!-- This place need to change the src -->
-                    <img src="resources/image/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                </a>
-                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
-            <div class="text-end">
+
+            <img src="resources/image/logo-red.png" width="32" height="32" class="rounded-circle">
+            <div class="text-end" style="margin-left: 5px;">
                 <button type="button" class="btn btn-outline-primary">Login</button>
                 <button type="button" class="btn btn-primary">Sign-up</button>
             </div>
         </div>
     </div>
 </header>
+<script lang="javascript">
+    let url = window.location.pathname;
+    url = url.substring(url.lastIndexOf('/') + 1, url.length - 5);
+    document.getElementById(url).style.fontWeight = 'bold'
+    document.getElementById(url).style.textDecorationLine = 'underline'
+
+</script>
