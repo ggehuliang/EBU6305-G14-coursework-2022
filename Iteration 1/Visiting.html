@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="resources/css/bootstrap.css">
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="resources/js/bootstrap.bundle.js"></script>
+<script src="resources/js/jquery.min.js"></script>
+
+<style>
+    #back_top {
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        bottom: 50px;
+        right: 40px;
+        border-radius: 10px 10px 10px 10px;
+        text-decoration: none;
+        display: none;
+        background-color: #999999;
+    }
+
+    #back_top span {
+        display: block;
+        width: 60px;
+        color: #dddddd;
+        font-size: 40px;
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    #back_top span:hover {
+        color: #cccccc;
+    }
+</style>
+    <title>
+        Visiting Page of Shaanxi Museum
+    </title>
+
+</head>
+
+<body>
+    <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+        <div class="d-flex flex-wrap gx-5 align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none ">
+                <img src="resources/image/logo-red.png" width="32" height="32" />
+            </a>
+
+            <ul class="nav gx-5 col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a class="btn btn-primary" href="index.html" role="button" id="index"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Home</a>
+                </li>
+                <li><a class="btn btn-primary" href="Visiting.html" role="button" id="Visiting"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Visiting</a></li>
+                <li><a class="btn btn-primary" href="Exhibitions.html" role="button" id="Exhibitions"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Exhibitions</a></li>
+                <li><a class="btn btn-primary" href="Collections.html" role="button" id="Collections"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Collections</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+
+
+            <img src="resources/image/logo-red.png" width="32" height="32" class="rounded-circle">
+            <div class="text-end" style="margin-left: 5px;">
+                <button type="button" class="btn btn-outline-primary">Login</button>
+                <button type="button" class="btn btn-primary">Sign-up</button>
+            </div>
+        </div>
+    </div>
+</header>
+<script lang="javascript">
+    let url = window.location.pathname;
+    url = url.substring(url.lastIndexOf('/') + 1, url.length - 5);
+    document.getElementById(url).style.fontWeight = 'bold'
+    document.getElementById(url).style.textDecorationLine = 'underline'
+
+</script>
+
+    <div class="container-fluid">
+        </head>
+
+        <body>
+            <div class="container">
+
+                <img class="bg" src="resources/image/mainImage.png">
+                <!-- style="max-width: 80%;" -->
+                <div>
+                    <h1 style="color: brown;font:bold;">Visitor imformation</h1>
+                    <h2>First, information for free open of Shaanxi History Museum</h2>
+                    <h3>Admission is free, every Tuesday to Sunday</h3>
+                </div>
+                <br>
+                <div>
+                    <h2>
+                        <p style="color: brown;">Visiting time</p>
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Winter<br>(15th Nov.-14th Mar., next year)<br>
+                            <p style="font-size: larger; color: brown;">9.00 am - 17.30 pm</p>(Box office closes at
+                            16.00 pm)
+                        </h2>
+                        <br>
+                        <!-- The time is in British expression, e.g 8:30->8.30 -->
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Summer<br>(15th Mar.-14th Nov.)<br>
+                            <p style="font-size: larger; color: brown;">8.30 am - 18.00 pm</p>(Box office closes at
+                            16.30 pm)
+                        </h2>
+                        <br>
+                    </div>
+                </div>
+            </div>
+    </div>
+  <section class="page-section">
+    <div class="row justify-content-md-center align-items-center" style="margin:1em">
+        <div class="col-md-auto">
+
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#MsgBox"
+                aria-expanded="false" aria-controls="MsgBox">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path
+                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                    <path fill-rule="evenodd"
+                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                </svg> Message Board</button>
+        </div>
+    </div>
+    <div id="MsgBox" class="collapse">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+
+                    <div class="row mt-3"></div>
+                    <div class="row mt-3"></div>
+
+
+                    <h2 class="mt-0">Please send us a message</h2>
+                    <hr class="divider">
+                    <p class="text-muted mb-5">If you have any suggestions on the maintenance of our cultural relics,
+                        please
+                        leave a message for us here, thank you very much for your contribution to the protection of
+                        cultural
+                        relics of the Chinese civilization!</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5  mb-5 justify-content-center">
+                <div class="col-lg-6">
+
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
+                                data-sb-validations="required,email" data-sb-can-submit="no">
+                            <label for="email">Email address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text"
+                                placeholder="Enter your message here..." style="height: 10rem"
+                                data-sb-validations="required" data-sb-can-submit="no"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+                            </div>
+                        </div>
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                To activate this form, sign up at
+                                <br>
+                                <a
+                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton"
+                                type="submit">Submit</button></div>
+                    </form>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                    <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                    <div>114514</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">EBU6305-G14-coursework-2022</div>
+    </div>
+</footer>
+<!-- 点击快速返回页面顶部 -->
+<div id="article">
+    <a id="back_top" href="script:;"><span>⌆</span></a>
+</div>
+<script>
+    $(function () {
+        $(window).scroll(function () {  //只要窗口滚动,就触发下面代码 
+            var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+            if (scrollt > 100) {  //判断滚动后高度超过100px,就显示  
+                $("#back_top").fadeIn(400); //淡出     
+            } else {
+                $("#back_top").stop().fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动   
+            }
+        });
+        $("#back_top").click(function () { //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部
+            $("html,body").animate({ scrollTop: "0px" }, 200);
+        });
+    });
+</script>
+
+</body>
+
+</html>
