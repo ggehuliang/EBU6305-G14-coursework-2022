@@ -16,30 +16,31 @@
          .container{
             text-align: center;
         }
-
-        .mx-auto{
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            font-weight: 500;
-        }
-
-        a{
-            color: #333;
-            text-decoration: none;
-        }
-
-        a:hover{
+        
+        h4:hover{
             color: rgb(127,50,34)
         }
 
-        img{
+        .col-lg-4 img{
             cursor:pointer;
             transition:all 0.7s;
         }
 
-        img:hover{
+        .col-lg-4 img:hover{
             transform:scale(1.05);
+        }
+
+        .word{
+            color: rgb(127,50,34);
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .detail{
+            color: rgb(127,50,34);
+            font-size: 20px;
+            font-weight: normal;
+            text-align: left;
         }
     </style>
 <!-- style="border: 1px dashed rgb(127,50,34);" -->
@@ -48,67 +49,340 @@
         <div class="row g-3" style="margin-bottom: 100px;">
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Tiger.html" target="_blank"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Tiger" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Tiger.html" target="_blank" style="padding-left: 6px;">Bronze Tiger-Shaped Tally of Du County</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_Tiger" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Bronze Tiger-Shaped Tally of Du...</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Gragon.html" target="_blank"><img class="img-fluid" src="resources/image/Gragon.png" alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Dragon" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Gragon.png" alt="无法显示" title="Gold Dragons in Running Position"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Gragon.html" target="_blank">Gold Dragons in Running Position</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_Dragon" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Gold Dragons in Running Position</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Plate.html" target="_blank"><img class="img-fluid" src="resources/image/Plate.png" alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Plate" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Plate.png" alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Plate.html" target="_blank" style="padding-left: 6px;">Gilt Silver Plate in Double-Peach Shape with Double-Fox Design</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_Plate" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Gilt Silver Plate in Double-Peach...</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Ladle.html" target="_blank"><img class="img-fluid" src="resources/image/Ladle.png" alt="无法显示" title="Ladle with A Sheep-Head-Shaped Handle"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Ladle" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Ladle.png" alt="无法显示" title="Ladle with A Sheep-Head-Shaped Handle"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Ladle.html" target="_blank" style="padding-left: 6px;">Ladle with A Sheep-Head-Shaped Handle</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_Ladle" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Ladle with A Sheep-Head-Shape...</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Sword.html" target="_blank"><img class="img-fluid" src="resources/image/Sword.png" alt="无法显示" title="Sword with A Horse-Head-Shaped Handle"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Sword" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Sword.png" alt="无法显示" title="Sword with A Horse-Head-Shaped Handle"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Sword.html" target="_blank" style="padding-left: 6px;">Sword with A Horse-Head-Shaped Handle</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_Sword" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Sword with A Horse-Head-Shape...</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Pot.html" target="_blank"><img class="img-fluid" src="resources/image/Pot.png" alt="无法显示" title="Celadon Pot With A Loop HandleBottom In-let"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Pot" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Pot.png" alt="无法显示" title="Celadon Pot With A Loop HandleBottom In-let"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Pot.html" target="_blank" style="padding-left: 6px;">Celadon Pot With A Loop HandleBottom In-let</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_Pot" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Celadon Pot With A Loop Handle...</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Dancer.html" target="_blank"><img class="img-fluid" src="resources/image/Dancer.jpg" alt="无法显示" title="Pottery Dancer with Double-Rings-Styled Hair"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Dancer" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Dancer.jpg" alt="无法显示" title="Pottery Dancer with Double-Rings-Styled Hair"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Dancer.html" target="_blank" style="padding-left: 6px;">Pottery Dancer with Double-Rings-Styled Hair</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_Dancer" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Pottery Dancer with Double-Ring...</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Seal.html" target="_blank"><img class="img-fluid" src="resources/image/Seal.png" alt="无法显示" title="Polyhedron-Jetted Seals"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Seal" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Seal.png" alt="无法显示" title="Polyhedron-Jetted Seals"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Seal.html" target="_blank">Polyhedron-Jetted Seals</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_Seal" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Polyhedron-Jetted Seals</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div style="border: 1px dashed rgb(127,50,34);">
-                    <a href="Ox.html" target="_blank"><img class="img-fluid" src="resources/image/ZunJar.png" alt="无法显示" title="Ox-shaped Zun Jar"> </a>
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_ZunJar" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/ZunJar.png" alt="无法显示" title="Ox-shaped Zun Jar"></button>
                     <h1 style="height: 20px;"></h1>
-                    <h4 class="mx-auto text-fluid" style="height: 40px;"><a href="Ox.html" target="_blank">Ox-shaped Zun Jar</a></h4>
+                    <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#exampleModal_ZunJar" style="padding: 0px; border: 0px;"><h4 class="mx-auto text-fluid" style="height: 40px; margin: 0px; padding: 4px 7px 0px 7px;">Ox-shaped Zun Jar</h4></button>
+                    <h1 style="height: 20px; margin: 0px;"></h1>
                 </div>
             </div>
+    </div>
+    <!-- Modal_Tiger -->
+    <div class="modal fade" id="exampleModal_Tiger" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Bronze Tiger-Shaped Tally of Du County</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Tiger_Detail.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">Warring States Period</p>
+                            <p class="word">Length: 9.5cm   Height: 4.4cm   Thickness: 0.7cm</p>
+                            <p class="word">Unearthed from the Southern Suburbs of Xian City in 1973</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">The tiger tally was designed to be split in half. The Emperor held the right half, whilst governor or general in Du county held the other half. It was used exclusively to mobilize armies in ancient China. The left half of the tally is in the shape of a walking tiger. When fitted together with the right half, a troop unit of more than 50 soldiers could be dispatched. It was the symbol of highly centralized military leadership in Qin Dynasty.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_Dragon -->
+    <div class="modal fade" id="exampleModal_Dragon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Gold Dragons in Running Position</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Gragon_Detail.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Gold Dragons in Running Position">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">Tang Dynasty</p>
+                            <p class="word">Length: 4cm    Height: 2.8cm</p>
+                            <p class="word">Unearthed from Hejiacun village, Xian City in 1970</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">These small dragons have two hornsa long tail. They were decorated with fish scale patterns all over their bodies.They are exquisite artistic treasures of the handicrafts of the Tang Dynasty.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_Plate -->
+    <div class="modal fade" id="exampleModal_Plate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Gilt Silver Plate in Double-Peach Shape with Double-Fox Design</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Plate_Detail.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">Tang Dynasty</p>
+                            <p class="word">Height: 14.5cm</p>
+                            <p class="word">Unearthed from Hejiacun village, Xian City in 1970</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">The unique shape of the plate is like a peach cut in half. There is one fox in the center of each half of the plate. The foxes are look at each other.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_Ladle -->
+    <div class="modal fade" id="exampleModal_Ladle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Ladle with A Sheep-Head-Shaped Handle</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Ladle_Detail1.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Ladle with A Sheep-Head-Shaped Handle" style="margin-bottom: 10px;">
+                    <img src="resources\image\Ladle_Detail2.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Ladle with A Sheep-Head-Shaped Handle" style="margin-top: 10px; margin-bottom: 10px;">
+                    <img src="resources\image\Ladle_Detail3.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Ladle with A Sheep-Head-Shaped Handle" style="margin-top: 10px;">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">Late Shang Dynasty</p>
+                            <p class="word">Length: 28cm</p>
+                            <p class="word">Unearthed from Xiejiagou, Qingjian County, Shaanxi Province in 1977</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">This vessel for ladling out wine was crafted in a unique style. On its handle there is a tiger preparing to catch a sheep. The mould as a whole presents a very vivid style.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_Sword -->
+    <div class="modal fade" id="exampleModal_Sword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Sword with A Horse-Head-Shaped Handle</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Sword_Detail.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Sword with A Horse-Head-Shaped Handle">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">Late Shang Dynasty</p>
+                            <p class="word">Length: 32cm</p>
+                            <p class="word">Unearthed from Yantoucun, Suide County, Shaanxi Province in 1965</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">With a handle in the shape of a horse head, this sword is a gem of a collection of articles for daily use from a minority nationality of the Shang Dynasty, called Gui Fang. This kind of artifact has also been excavated in Qinglong of Hebei Province, Shilou of Shanxi Province,the Fuhao’s tomb of Yinxu Ruins at Anyang, Henan Province. Using the head of a snake, horsesheep as the handle of a knife or sword is the decorative feature of this nomadic tirbe from Northern China.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_Pot -->
+    <div class="modal fade" id="exampleModal_Pot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Celadon Pot With A Loop HandleBottom In-let</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Pot_Detail.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Celadon Pot With A Loop HandleBottom In-let">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">The Five Dynasties</p>
+                            <p class="word">Height: 18.3cm   Diameter of Belly: 14.3cm</p>
+                            <p class="word">Unearthed from Binxian County, Shaanxi Province in 1968</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">This pot is in the shape of a ball. The simulated lidthe body are inseparable. On the handle is a phoenix whose mouth is in the shape of a mother lion feeding her bady. In the central bottom there is a small flower-like hole which is the only way that water can be poured in. It is a rare treasure of the Yaozhou Kiln wares.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_Dancer -->
+    <div class="modal fade" id="exampleModal_Dancer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Pottery Dancer with Double-Rings-Styled Hair</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Dancer_Detail.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Pottery Dancer with Double-Rings-Styled Hair">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">Tang Dynasty</p>
+                            <p class="word">Height: 37.8cm</p>
+                            <p class="word">Unearthed from Changwu County, Shaanxi Province in 1985</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">Probably a dancer, this girl wears an exquisite outfithas a slim figure and double-ringed hairstyle. This pottery figure is regarded typical material evidence for the study of the dancing costume of the Tang Dynasty.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_Seal -->
+    <div class="modal fade" id="exampleModal_Seal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Polyhedron-Jetted Seals</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Seal_Detail1.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Polyhedron-Jetted Seals" style="margin-bottom: 10px;">
+                    <img src="resources\image\Seal_Detail2.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Polyhedron-Jetted Seals" style="margin-top: 10px;">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">Western Wei Period</p>
+                            <p class="word">Height: 4.5cm   Width: 4.35cm   Weight: 7.57cm</p>
+                            <p class="word">Unearthed from Xunyang County, Shaanxi Province in 1981</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">This 24-sided object was made of jet. Its 14 sides are individually inscribed with the different official titles of General Dugu Xin at different times in his life. It is the only seal which was made in this unique style.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_ZunJar -->
+    <div class="modal fade" id="exampleModal_ZunJar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Ox-shaped Zun Jar</strong></p>
+                        </blockquote>
+                    </figure>
+                    <img src="resources\image\Ox_Detail.png" class="img-fluid mx-auto d-block img-thumbnail" alt="无法显示" title="Ox-shaped Zun Jar">
+                    <figure class="text-center" style="margin-top: 20px;">
+                        <blockquote class="blockquote">
+                            <p class="word">Middle Period of the Western Zhou Dynasty</p>
+                            <p class="word">Height: 24cm  Length: 38cm  Depth of Belly: 10.7cm</p>
+                            <p class="word">Unearthed from Qishan County, Shaanxi Province in 1967</p>
+                        </blockquote>
+                    </figure>
+                    <p class="detail">This wine container was made in the shape of an ox, with a square hole on its backa tiger-shaped lid. The tail of the ox is the handle. The exaggerated animal form features a very magnificent style.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     @@include('./components/footer.html')

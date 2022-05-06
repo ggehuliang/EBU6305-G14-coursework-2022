@@ -18,11 +18,11 @@
   "homepage": "https://github.com/ggehuliang/EBU6305-G14-coursework-2022#readme",
   "dependencies": {
     "bootstrap": "^5.1.3",
-    "gulp": "^4.0.2",
     "jquery": "^3.6.0",
     "open": "^8.4.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "gulp-file-include": "^2.3.0"
   }
 }
