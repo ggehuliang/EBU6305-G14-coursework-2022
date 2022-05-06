@@ -1,7 +1,6 @@
 <section class="page-section">
     <div class="row justify-content-md-center align-items-center" style="margin:1em">
         <div class="col-md-auto">
-
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#MsgBox"
                 aria-expanded="false" aria-controls="MsgBox">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -34,50 +33,46 @@
             <div class="row gx-4 gx-lg-5  mb-5 justify-content-center">
                 <div class="col-lg-6">
 
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
 
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                data-sb-validations="required,email" data-sb-can-submit="no">
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                        </div>
-
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text"
-                                placeholder="Enter your message here..." style="height: 10rem"
-                                data-sb-validations="required" data-sb-can-submit="no"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+                    <div class="position-fixed top-0 middle p-3" style="z-index: 11;">
+                        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true"
+                            id="liveToast">
+                            <div class="d-flex">
+                                <div class="toast-body">
+                                    <p style="color: red;">Please input your email address and message before submit!
+                                    </p>
+                                </div>
+                                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
                             </div>
                         </div>
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br>
-                                <a
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton"
-                                type="submit">Submit</button></div>
-                    </form>
+                    </div>
+                    <!-- Email address input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" type="email" placeholder="name@example.com">
+                        <label for="email">Email address</label>
+                    </div>
+
+                    <!-- Message input-->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."
+                            style="height: 10rem"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton"
+                            onclick="submitCmt()">Submit</button></div>
                 </div>
             </div>
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-4 text-center mb-5 mb-lg-0">
                     <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                    <div>114514</div>
+                    <div>Latest Comments</div>
                 </div>
             </div>
+            <div class="row gx-4 gx-lg-5  mb-5 justify-content-center" id="msgs">
+            </div>
+
         </div>
     </div>
 </section>
@@ -89,7 +84,7 @@
 </footer>
 <!-- 点击快速返回页面顶部 -->
 <div id="article">
-    <a id="back_top" href="script:;"><span>⌆</span></a>
+    <a id="back_top"><span>⌆</span></a>
 </div>
 <script>
     $(function () {
@@ -105,4 +100,59 @@
             $("html,body").animate({ scrollTop: "0px" }, 200);
         });
     });
+    let localComments = JSON.parse(window.localStorage.comment ?? '[]')
+    function formatDate(time, format = 'YY-MM-DD hh:mm:ss') {
+        var date = new Date(time);
+
+        var year = date.getFullYear(),
+            month = date.getMonth() + 1,//月份是从0开始的
+            day = date.getDate(),
+            hour = date.getHours(),
+            min = date.getMinutes(),
+            sec = date.getSeconds();
+        var preArr = Array.apply(null, Array(10)).map(function (elem, index) {
+            return '0' + index;
+        });
+
+        var newTime = format.replace(/YY/g, year)
+            .replace(/MM/g, preArr[month] || month)
+            .replace(/DD/g, preArr[day] || day)
+            .replace(/hh/g, preArr[hour] || hour)
+            .replace(/mm/g, preArr[min] || min)
+            .replace(/ss/g, preArr[sec] || sec);
+
+        return newTime;
+    }
+    function setComments() {
+        const msgs = $('#msgs')
+        msgs.empty()
+        localComments.forEach(element => {
+            const emailAddr = element.emailAddr
+            const text = element.text
+            const time = formatDate(element.time)
+            msgs.append(`<div class="card w-50" style="margin: 0.5rem">
+                    <div class="card-header">
+                        ${emailAddr}
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">${text}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <div style="text-align: right;">${time}</div>
+                    </div>
+                </div>`)
+        });
+    }
+    setComments()
+    function submitCmt() {
+        const email = $('#email').val()
+        const msg = $('#message').val()
+        if (!email || !msg) {
+            (new bootstrap.Toast(document.getElementById('liveToast'))).show()
+        } else {
+            localComments.push({ emailAddr: email, text: msg, time: Date.now() })
+            window.localStorage.setItem("comment", JSON.stringify(localComments))
+            setComments()
+        }
+    }
 </script>
