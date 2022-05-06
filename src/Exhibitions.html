@@ -22,6 +22,24 @@
             font-weight: 500;
         }
 
+
+        .text{
+            text-align: left;
+            font-size: x-large;
+            font-weight: 500;
+        }
+        .titletext{
+            text-align: left;
+            font-size: xx-large;
+        }
+
+        .overalltitletext{
+            color:#9a735f;
+            text-align: left;
+            font-size: xx-large;
+        }
+
+
         a{
             color: #333;
             text-decoration: none;
@@ -40,7 +58,7 @@
             transform:scale(1.05);
         }
 
-        .button {
+        <!-- .button {
 
             width: 280px;
             height: 70px;
@@ -48,12 +66,12 @@
             font-size: x-large;
             color: rgb(0, 0, 0);
             background-color: rgb(179, 177, 177);
-        }
+        } -->
 
         .button_small {
 
             width:250px;
-            height:50px;
+            height:70px;
             border: #F0F0F0;
             font-size: large;
             color: rgb(0, 0, 0);
@@ -73,7 +91,7 @@
     <div class="container">
         <h1 c style="margin: 60px 0px; color: rgb(127,50,34)"><b>Exhibition<b></h1>
         <div class="row g-3">
-            <div class="row g-4">
+            <!-- <div class="row g-4">
                 <div class="col-lg-3">
                     <button class="button"><strong>Permanent Exhibition</strong></button>
                 </div>
@@ -86,18 +104,21 @@
                 <div class="col-lg-3">
                     <button class="button"><strong>Virtual Exhibition</strong></button>
                 </div>
-            </div>
-            
-            <br><br><br>
+            </div> -->
+            <p class="overalltitletext">
+                Permanent Exhibition
+            </p>
+         
             <ul class="row g-3">
 
                 <div class="col-lg-4">
                     <div style="border: 1px dashed rgb(127,50,34);">
-                        <a href="#"><img class="img-fluid" src="resources/image/ex1.jpg" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"> </a>
+                        <a href="#"><img class="img-fluid" src="resources/image/ex1.jpg" alt="无法显示" title="First Exhibition Hall"> </a>
                         <h1 style="height: 20px;"></h1>
-                        <a href="./exhi1.html">
-                            <button class="button_small">The First Exhibition Hall</button>
-                        </a>
+                        <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Tiger" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"></button> -->
+                        <!-- <a href="./exhi1.html"> -->
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#firstex">The First Exhibition Hall</button>
+                        <!-- </a> -->
                         <br>
                         <!--这里为了让按钮上下居中，不知道该咋写了.....-->
                         <button class="zhanwei">The First Exhibition Hall</button>
@@ -106,24 +127,539 @@
                 </div>
                 <div class="col-lg-4">
                         <div style="border: 1px dashed rgb(127,50,34);">
-                            <a href="#"><img class="img-fluid" src="resources/image/ex2.jpg" alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <a href="#"><img class="img-fluid" src="resources/image/ex2.jpg" alt="无法显示" title="Second Exhibition Hall"> </a>
                             <h1 style="height: 20px;"></h1>
-                            <button class="button_small">The Second Exhibition Hall</button>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#Secondex">The Second Exhibition Hall</button>
                             <br>
                             <button class="zhanwei">The First Exhibition Hall</button>
                         </div>
                 </div>
                 <div class="col-lg-4">
                         <div style="border: 1px dashed rgb(127,50,34);">
-                            <a href="#"><img class="img-fluid" src="resources/image/ex3.jpg" alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <a href="#"><img class="img-fluid" src="resources/image/ex3.jpg" alt="无法显示" title="Third Exhibition Hall"> </a>
                             <h1 style="height: 20px;"></h1>
-                            <button class="button_small">The Third Exhibition Hall</button>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#Thirdex">The Third Exhibition Hall</button>
                             <br>
                             <button class="zhanwei">The First Exhibition Hall</button>
                         </div>
                 </div>
+                <p class="overalltitletext">
+                    
+                </p>
+                <p class="overalltitletext">
+                    Special Exhibition
+                </p>
+
+                <div class="col-lg-4">
+                    <div style="border: 1px dashed rgb(127,50,34);">
+                        <a href="#"><img class="img-fluid" src="resources/image/se1.png" alt="无法显示"> </a>
+                        <h1 style="height: 20px;"></h1>
+                        <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Tiger" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"></button> -->
+                        <!-- <a href="./exhi1.html"> -->
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#spex1">Fighting Against the Novel Coronavirus</button>
+                        <!-- </a> -->
+                        <br>
+                        <!--这里为了让按钮上下居中，不知道该咋写了.....-->
+                        <button class="zhanwei">The First Exhibition Hall</button>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/se2.png" alt="无法显示" > </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#spex2">Cultural Relics in the Liujiawa Cemetery</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/se3.png" alt="无法显示" > </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#spex3">Artefacts of the Zhou, Qin, HanTang Dynasties</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+
+          
+                <p class="overalltitletext">
+                    
+                </p>
+                <p class="overalltitletext">
+                    Thematic Exhibition
+                </p>
+
+                <div class="col-lg-4">
+                    <div style="border: 1px dashed rgb(127,50,34);">
+                        <a href="#"><img class="img-fluid" src="resources/image/te1.png" alt="无法显示"> </a>
+                        <h1 style="height: 20px;"></h1>
+                        <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Tiger" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"></button> -->
+                        <!-- <a href="./exhi1.html"> -->
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#thex1">Mural Paintings of the Tang Dynasty</button>
+                        <!-- </a> -->
+                        <br>
+                        <!--这里为了让按钮上下居中，不知道该咋写了.....-->
+                        <button class="zhanwei">The First Exhibition Hall</button>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/te2.png" alt="无法显示" > </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#thex2">Treasures of the Great Tang Dynasty</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+              
+                
     </div>
 
+
+    <div class="modal fade" id="firstex" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>First Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    <ul class="row g-1">
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall1.jpg"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall2.jpg"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                  
+                        <p class="titletext">
+                            Prehistoric period
+                        </p>
+                        <p class="text">
+                            Situated in the Middle Yellow River, Shaanxi Province is reputed to be the birthplace of the Chinese 
+                            nationcradle of world civilizations. It was once inhabited by early hominids, as evidenced by the 
+                            archaeological discoveries of early Homo erectus remains such as the Lantian Manthe Dali Man. Other 
+                            important Neolithic sites in Shaanxi include Banpo, Jiangzhai, Yangguanzhai in central Shaanxi,Shimao 
+                            in northern Shaanxi. All these prehistoric sites reveal civilizational discourse from the dawn of civilization 
+                            to the thriving of the Chinese nation.
+                        </p>
+                 
+                        <br><br><br><br><br><br><br><br><br>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall3.jpg"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall4.jpg"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                  
+                        <p class="titletext">
+                            Zhou period
+                        </p>
+                        <p class="text">
+                            The Western Zhou Dynasty represents the 
+                            first state formation of early China. Its political systemeconomic
+                             structure as well as ethical ethos had profound impact on later period 
+                             dynasties. Just as what the Confucius highly complimented, ‘how completeelegant
+                              are the Zhou regulations. I will follow them’, as the capitalpolitical
+                             center of the Western Zhou Dynasty, Shaanxi owns abundant cultural relicsarchaeological remains from this period.
+                        </p>
+                        <br><br><br><br><br><br><br><br><br>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall5.jpg"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall6.jpg"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                  
+                        <p class="titletext">
+                            Qin period
+                        </p>
+                        <p class="text">
+                            The Qin people belonged to one of the clans of the Huaxia group.
+                             They lived around the present day Tianshui region of Gansu Province. 
+                             After the historical event of the King Ping of the Eastern Zhou Dynasty’s eastward migration in 770BC, 
+                             Qin people developed their economy in their homeland in Shaanxi. 
+                             In 221BC, Emperor Qin Shihuang annexed the other six feudal statesestablished the first unified and multi-national centralized state, 
+                             which had tremendous political, economic and military influences on the later period dynasties.
+                              The archaeological remains of Qin people, represented by the terracotta warriorshorses,
+                               characteristic of Qin people’s imposing grandeurdistinctive military power, vividly reflect the main sphere of the Qin culturethe spirits of the time.
+        
+                        </p>
+                        <br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="Secondex" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\ex21.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\ex22.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+                        <p class="titletext">
+                            The Han Dynasty
+                        </p>
+
+                        <p class="text">
+                            The Western Han Empire represented one of the heydays in ancient Chinese history. It founded its capital in Chang’an. As the starting point of the east-west trade route of the Silk Roads, Chang’an became the center of civilizationa prominent international metropolis in ancient East Asia. China emerged as a powerful country for the first time in the world. The archaeological discoveries of royalaristocratic tombs near Chang’an demonstrate the prosperity of the society, the colourful life of the people, the diversity of the art,the upbeat spirit of the people of the Han Empire.
+                        </p>
+                        <br><br><br>
+                        <!-- <div class="col-lg-10">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex23.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <img src="resources\image\ex23.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <p class="titletext">
+                            The Wei, Jin,SouthernNorthern Dynasties
+                        </p>
+                        <p class="text">
+                            China underwent a period of chaos and disunity with constant warfareturbulences from 220AD to 581AD, know in historical documents as the Wei, Jin,SouthernNorthern Dynasties. Minority ethnic groups in northern China contended with each other. The frequent immigration led to the integration of the agrarian culture with the nomadic culture. The Silk Roads continued to thrive during this period. The advance of Buddhism to the east greatly simulated the development of art.
+                        </p>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="Thirdex" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\ex31.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\ex32.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+                        <p class="titletext">
+                            The SuiTang dynasties
+                        </p>
+
+                        <p class="text">
+                            The SuiTang dynasties are the most glorious time in ancient China. Their capital Chang’an was the largestthe most prosperous metropolis in the contemporary world. The politics, economic and culture of the SuiTang dynasties were fully developed through the extensive contact with other civilizations. The cultural relics from these two dynasties are the manifestation of the inclusiveness of the erathe stunning achievements attained through great creativity.
+                        </p>
+                        <br><br><br>
+                        <!-- <div class="col-lg-10">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex23.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <img src="resources\image\ex33.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <p class="titletext">
+                            Shaanxi After the Tang Dynasty
+                        </p>
+                        <p class="text">
+                            After the Tang Dynasty, Shaanxi no longer held the position as the seat of the imperial capital of China since Chinese political center moved to the east of the country. However, as the political, economic,cultural center of northwest China, Shaanxi continued to play a leading role in creatinginheriting Chinese culture with unique characteristics.
+                        </p>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="spex1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\se1.png" width="483"   alt="无法显示" >
+    
+            
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+
+                        <br><br><br>
+                        <p class="text">
+                            Date: Sep. 25 - Nov. 25, 2020
+                        </p>
+
+                        <p class="text">
+                            Location: Exhibition Hall no. 5
+                        </p>
+                        <p class="text">
+                            Hosted by: China Relic Information Consultation Center
+                        </p>
+                        <p class="text">
+                            Organized by: the Shaanxi History Museum
+                        </p>
+                        <br><br><br>
+                        <!-- <div class="col-lg-10">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex23.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                      
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="spex2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\se2.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\se21.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\se22.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+
+                        <p class="text">
+                            Date: Jun. 15 - Oct. 11, 2020</p>
+                        <p class="text">
+                            Location: Exhibition Hall no. 7</p>
+                        <p class="text">
+                            Organized by: The Shaanxi History Museum, the Shaanxi Academy of Archaeology,the Bureau of CultureTourism of Chengcheng County
+
+
+                        </p>
+                    
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="spex3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\se2.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\se31.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\se32.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+
+                        <p class="text">
+                            Date: Jan. 10, 2020 - Mar. 28</p>
+                        <p class="text">
+                            Location: No. 7 Exhibition Hall</p>
+                        <p class="text">
+                            Hosted by: Shaanxi Provincial Cultural Heritage Administration, Tsinghua University
+
+                        </p>
+                    
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="thex1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\te1.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\te12.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\te13.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+
+                        <p class="text">
+                            The Tang Dynasty (618-907 AD) was the heyday of ancient China.</p>
+                        <p class="text">
+                            The paintings of the Tang Dynasty represented the highest level of artistic achievements which linked the preceding artthe following art. However, few paintings have survived the passing of time.</p>
+                        <p class="text">
+                            Since the 1950s, many paintings of landscapes, buildings, utensil, people, animalsplants have been found in the Tang Tombs, depicting the reality of life during the Tang Dynasty. These paintings provide a panoramic view for understanding the rituals of the imperial court as well as the architectural style of the period. Moreover, the customs of the peopletheir characteristics of dressinsights to their entertainment activities are also shown.
+
+                        </p>
+                        <p class="text"> The exhibition present nearly one hundred pieces of murals. They were selected from the museum’s rich collection of mural paintings which were unearthed from imperial tombsthe tombs of Tang nobles.</p>
+                    
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="thex2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\te21.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+        
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+
+                        <p class="text">
+                            On October 5, 1970, two large urns, containing more than one thousand splendid gold, silver, jade, crystal, agateglass wares, were unearthed at Hejiacun village in the southern suburbs of Xian city, the place where the Xinghua fang grid of Chang’an city of the Tang dynasty was located. These objects won everybody’s admiration for the perfect integration of the bearing of the Great Tang dynastythe exotic style. Chinese archaeologists considered this discovery as a rival of "Treasures of Oxus River", the famous archaeological discovery known by the west, as well as one of the Significant Archaeological Discoveries of China during the Twentieth Century.</p>
+                        <p class="text">
+                            Since Hejiacun treasures were discovered, only a small part of them were displayed in this museum were invited to join the overseas tour exhibitions. Most of them were kept in the storehouses. When these treasures were buried? Who was the owner? Why they were buried? This exhibition presents the most complete set of the discovered treasures. We invite you to explore these riddlesshare the rare legacy of the great Tang Dynasty.
+
+                        </p>
+                    
+                    
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     @@include('./components/footer.html')
 </body>
 
