@@ -1,11 +1,49 @@
-<header class="p-3 mb-3 border-bottom">
-    <div class="container">
-        <div class="d-flex flex-wrap gx-5 align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none ">
-                <img src="resources/image/logo-red.png" width="32" height="32" />
-            </a>
+<style>
+    #nav {
+        background: rgba(0, 0, 0, 0.2);
+        transition: 500ms;
+        backdrop-filter: blur(10px);
+    }
 
-            <ul class="nav gx-5 col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+    #nav:hover {
+        background: rgba(0, 0, 0, 0.6);
+        transition: 500ms;
+    }
+
+    @keyframes turn {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    #expbtn:hover {
+        animation-name: turn;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+</style>
+<nav class="navbar navbar-expand-md fixed-top" id="nav">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand" style="margin-left: 1em;">
+            <img src="resources/image/logo-red.png" width="32" height="32" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"
+            aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation" id="expbtn"
+            style="margin-right: 1em;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-yin-yang"
+                viewBox="0 0 16 16">
+                <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z" />
+                <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z" />
+            </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li><a class="btn btn-primary" href="index.html" role="button" id="index"
                         style="background-color:rgb(127,50,34);margin-left: 5px;">Home</a>
                 </li>
@@ -16,20 +54,13 @@
                 <li><a class="btn btn-primary" href="Collections.html" role="button" id="Collections"
                         style="background-color:rgb(127,50,34);margin-left: 5px;">Collections</a></li>
             </ul>
-
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             </form>
-
-
-            <img src="resources/image/logo-red.png" width="32" height="32" class="rounded-circle">
-            <div class="text-end" style="margin-left: 5px;">
-                <a href="Login.html" role="button" class="btn btn-outline-primary">Login</a>
-                <a href="Login.html" role="button" class="btn btn-primary">Sign-up</a>
-            </div>
+            <a href="Login.html" role="button" class="btn btn-outline-primary" style="margin-right: 1em;">Login</a>
         </div>
     </div>
-</header>
+</nav>
 <script lang="javascript">
     let url = window.location.pathname;
     url = url.substring(url.lastIndexOf('/') + 1, url.length - 5);
