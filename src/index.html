@@ -6,34 +6,8 @@
   <title>Shaanxi Museum Intro</title>
 </head>
 
-<style>
-  .MMM8::before {  
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
-
-.MMM8:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.MMM8::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  inset: 0 0 0 0;
-  background: hsl(200 100% 80%);
-  z-index: -1;
-  transition: transform .3s ease;
-}
-</style>
-
-
-
-
 <body
-  style="background-color:rgb(255, 243, 235); ">
+  style="background-color:rgb(255, 243, 235);overflow-x:hidden">
   @@include('./components/nav.html')
 
 
@@ -91,16 +65,16 @@
       <div class="row mt-3"></div>
 
       <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-lg-8 text-center">
+        <div class="col-lg-8 text-center ">
           <h2 class=" mt-0">Welcome to Shaanxi History Museum!</h2>
-          <hr class="divider divider-light">
+          <hr class="divider divider-light  reveal">
 
-          <p class=" mb-4">Tracing the origin of the Han and Tang dynasties, searching for the roots of
+          <p class=" mb-4  reveal" >Tracing the origin of the Han and Tang dynasties, searching for the roots of
             Chinese civilization, feeling the prosperity and weight of history, and reading the vicissitudes and wisdom
             of the years!</p>
 
 
-          <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+          <a class="btn btn-light btn-xl  reveal" href="#services">Get Started!</a>
         </div>
       </div>
     </div>
@@ -112,8 +86,8 @@
 
   <section class="container">
 
-    <div class="row gx-5 ">
-      <div class="col-lg-7 mb-5" style="border-right :5px solid rgb(127,50,34);">
+    <div class="row gx-5 reveal">
+      <div class="col-lg-7 mb-5  " style="border-right :5px solid rgb(127,50,34);">
         <div class="card h-100 shadow border-0">
           <div class="card-body p-4">
 
@@ -129,13 +103,13 @@
             <div class="row mt-3"></div>
             <a href="#" class="card-group-link">Click here to learn more.......</a>
             <div class="row mt-3"></div>
-            <img src="resources\image\co-4.png" class="card-img-top" alt="...">
+            <img src="resources\image\co-3.png" class="card-img-top" alt="...">
           </div>
 
         </div>
       </div>
 
-      <div class="col-lg-5 mb-5">
+      <div class="col-lg-5 mb-5  reveal">
         <div class="card text-center text-white h-100 shadow border-0" style="background-color:rgb(79, 58, 11)">
           <div class="card-body p-4">
 
@@ -190,10 +164,10 @@
     </div>
   </div>
 
-  <section class="container">
+  <section class="container reveal">
 
     <div class="row gx-5 text-white">
-      <div class="col-lg-4 mb-5">
+      <div class="col-lg-4 mb-5   reveal">
         <div class="card h-100 shadow border-0" style="background-color:rgb(79, 58, 11)">
           <div class="card-body p-4">
             <div class="badge bg-primary bg-gradient rounded-pill mb-2">Oh</div>
@@ -224,8 +198,8 @@
       </div>
 
 
-      <div class="col-lg-4 mb-5 text-dark">
-        <div class="card h-100 shadow border-0 " style="background-color:rgb(135, 125, 104)">
+      <div class="col-lg-4 mb-5 text-dark reveal">
+        <div class="card h-100 shadow border-0" style="background-color:rgb(135, 125, 104)">
           <div class="card-body p-4">
             <div class="badge bg-primary bg-gradient rounded-pill mb-2 ">God</div>
             <a class="text-decoration-none link-dark stretched-link" href="#!">
@@ -294,7 +268,7 @@
 
 
   <section class="py-5 bg-light">
-    <div class="container px-5 my-5">
+    <div class="container px-5 my-5  reveal">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="resources\image\in2.png" alt="..."></div>
         <div class="col-lg-6">
@@ -327,7 +301,7 @@
   </section>
 
   <section class="py-5 bg-light">
-    <div class="container px-5 my-5">
+    <div class="container px-5 my-5  reveal">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="resources\image\in4.png" alt="..."></div>
         <div class="col-lg-6">
