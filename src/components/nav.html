@@ -1,4 +1,10 @@
 <style>
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     #nav {
         background: rgba(0, 0, 0, 0.2);
         transition: 500ms;
@@ -11,7 +17,7 @@
     }
 
     .reveal {
-        position: relative;
+        /* position: relative; */
         transform: translateY(150px) scale(1.2, 1.2);
         opacity: 0;
         transition: 1s all ease;
@@ -45,8 +51,7 @@
             <img src="resources/image/logo-red.png" width="32" height="32" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"
-            aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation" id="expbtn"
-            style="margin-right: 1em;">
+            aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation" id="expbtn">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-yin-yang"
                 viewBox="0 0 16 16">
                 <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z" />
