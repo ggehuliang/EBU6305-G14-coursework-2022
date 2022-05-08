@@ -6,9 +6,11 @@
   <title>Shaanxi Museum Intro</title>
 </head>
 
-<body style="background-color:rgb(255, 243, 235); border-right: 10px solid rgb(101, 87, 84); border-left: 10px solid rgb(105, 91, 88);">
+<body
+  style="background-color:rgb(255, 243, 235); border-right: 10px solid rgb(101, 87, 84); border-left: 10px solid rgb(105, 91, 88);">
   @@include('./components/nav.html')
-  <section class="container">
+
+
 
     <div class="row" style="border-bottom:3px solid rgb(127,50,34);border-top:3px solid rgb(127,50,34);">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -20,15 +22,21 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
             aria-label="Slide 3"></button>
         </div>
+
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="resources\image\in1.png" class="d-block w-100" alt="...">
+
+            <video muted loop autoplay="autoplay" class="d-block w-100">
+
+              <source src="resources\image\p.mp4" type="video/mp4">
+            </video>
+
           </div>
           <div class="carousel-item">
-            <img src="resources\image\in6.png" class="d-block w-100" alt="...">
+            <img src="resources\image\co11.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="resources\image\inplus.png" class="d-block w-100" alt="...">
+            <img src="resources\image\co22.png" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -44,12 +52,41 @@
       </div>
     </div>
 
+
+  <div class="row mt-3"></div>
+
+  <section class="page-section" id="about" >
+
+
+    <div class="container px-4 px-lg-5">
+
+      <div class="row mt-3"></div>
+
+      <div class="row mt-3"></div>
+
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class=" mt-0">Welcome to Shaanxi History Museum!</h2>
+          <hr class="divider divider-light">
+
+          <p class=" mb-4">Tracing the origin of the Han and Tang dynasties, searching for the roots of
+            Chinese civilization, feeling the prosperity and weight of history, and reading the vicissitudes and wisdom
+            of the years!</p>
+
+
+          <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+        </div>
+      </div>
+    </div>
+
+
+
   </section>
 
   <div class="row mt-3"></div>
   <div class="row mt-3"></div>
   <div class="row mt-3"></div>
-  <div class="row mt-3"></div>
+
 
   <section class="container">
 
@@ -57,40 +94,41 @@
       <div class="col-lg-7 mb-5" style="border-right :5px solid rgb(127,50,34);">
         <div class="card h-100 shadow border-0">
           <div class="card-body p-4">
-            
-            
+
+
             <li class="list-group-item">1.A notice about the recruitment of professional museum collection .....</li>
             <div class="card-footer">
               2.Publicity on the appointment and dismissal of museum personnel.
-              </div>
+            </div>
             <li class="list-group-item">3.A notice about temporary maintenance of the library.</li>
             <div class="card-footer">
               4.About a major breakthrough in researchers' historical research on a ......
-              </div>
-              <div class="row mt-3"></div>
-              <a href="#" class="card-group-link">Click here to learn more.......</a>
-              <div class="row mt-3"></div>
-              <img src="resources\image\in61.png" class="card-img-top" alt="...">
+            </div>
+            <div class="row mt-3"></div>
+            <a href="#" class="card-group-link">Click here to learn more.......</a>
+            <div class="row mt-3"></div>
+            <img src="resources\image\co-3.png" class="card-img-top" alt="...">
           </div>
 
         </div>
       </div>
 
-    <div class="col-lg-5 mb-5" >
-      <div class="card text-center text-white h-100 shadow border-0" style="background-color:rgb(79, 58, 11)">
-        <div class="card-body p-4">
+      <div class="col-lg-5 mb-5">
+        <div class="card text-center text-white h-100 shadow border-0" style="background-color:rgb(79, 58, 11)">
+          <div class="card-body p-4">
 
-          <h4 class="card-title">2022/04/01</h4>
-          <h3 class="card-title">Open Today</h3>
+            <h4 class="card-title">2022/04/01</h4>
+            <h3 class="card-title">Open Today</h3>
 
-          <div class="card-header text-black" style="background-color:rgb(155, 136, 96)">It should be noted by all visitors:<br>
-            Shaanxi Hsitory Museum is closed on Mondays all year rounf<br>
-            except for statutory holidays.<br>
-            To enter the library.you need to check your health code, take your<br>
-            temperature and swipe your ID card.<br>
-          </div>
-          <div class="row mt-3"></div>
-          <p class="card-text mb-0">
+            <div class="card-header text-black" style="background-color:rgb(155, 136, 96)">It should be noted by all
+              visitors:<br>
+              Shaanxi Hsitory Museum is closed on Mondays all year rounf<br>
+              except for statutory holidays.<br>
+              To enter the library.you need to check your health code, take your<br>
+              temperature and swipe your ID card.<br>
+            </div>
+            <div class="row mt-3"></div>
+            <p class="card-text mb-0">
             <h4 class="card-title">Visiting Time:</h4>
             For winter(November 15 to March 14 of the next year):<br>
             <div class="row mt-3"></div>
@@ -101,54 +139,16 @@
             <h4 class="card-title">8:30 a.m. ~18:00 p.m.</h4>
             (Box office close at 16:00)</p>
 
-            <a href="#" class="btn btn-light">     Click here to learn more.......   </a>
-        </div>
+            <a href="#" class="btn btn-light"> Click here to learn more....... </a>
+          </div>
 
+        </div>
       </div>
     </div>
-  </div>
   </section>
 
 
 
-  <section class="page-section" id="about" style="background-color:rgb(123, 89, 17)">
-
-
-    <div class="container px-4 px-lg-5">
-
-      <div class="row mt-3"></div>
-      <div class="row mt-3"></div>
-      <div class="row mt-3"></div>
-      <div class="row mt-3"></div>
-      <div class="row mt-3"></div>
-      <div class="row mt-3"></div>
-      <div class="row mt-3"></div>
-      <div class="row mt-3"></div>
-
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">Welcome to Shaanxi History Museum!</h2>
-          <hr class="divider divider-light">
-
-          <p class="text-white mb-4">Tracing the origin of the Han and Tang dynasties, searching for the roots of
-            Chinese civilization, feeling the prosperity and weight of history, and reading the vicissitudes and wisdom
-            of the years!</p>
-          <div class="row mt-3"></div>
-          <div class="row mt-3"></div>
-          <div class="row mt-3"></div>
-          <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-3"></div>
-    <div class="row mt-3"></div>
-    <div class="row mt-3"></div>
-    <div class="row mt-3"></div>
-    <div class="row mt-3"></div>
-
-
-  </section>
 
 
   <div class="row gx-5 justify-content-center">
@@ -177,9 +177,9 @@
 
   <section class="container">
 
-    <div class="row gx-5 ">
+    <div class="row gx-5 text-white">
       <div class="col-lg-4 mb-5">
-        <div class="card h-100 shadow border-0">
+        <div class="card h-100 shadow border-0" style="background-color:rgb(79, 58, 11)">
           <div class="card-body p-4">
             <div class="badge bg-primary bg-gradient rounded-pill mb-2">Oh</div>
             <a class="text-decoration-none link-dark stretched-link" href="#!">
@@ -193,8 +193,8 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 mb-5">
-        <div class="card h-100 shadow border-0">
+      <div class="col-lg-4 mb-5 text-white">
+        <div class="card h-100 shadow border-0" style="background-color:rgb(111, 95, 62)">
           <div class="card-body p-4">
             <div class="badge bg-primary bg-gradient rounded-pill mb-2">My</div>
             <a class="text-decoration-none link-dark stretched-link" href="#!">
@@ -209,10 +209,10 @@
       </div>
 
 
-      <div class="col-lg-4 mb-5">
-        <div class="card h-100 shadow border-0">
+      <div class="col-lg-4 mb-5 text-dark">
+        <div class="card h-100 shadow border-0 " style="background-color:rgb(135, 125, 104)">
           <div class="card-body p-4">
-            <div class="badge bg-primary bg-gradient rounded-pill mb-2">God</div>
+            <div class="badge bg-primary bg-gradient rounded-pill mb-2 ">God</div>
             <a class="text-decoration-none link-dark stretched-link" href="#!">
               <h5 class="card-title mb-3">Transportation Route</h5>
             </a>
