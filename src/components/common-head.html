@@ -9,7 +9,55 @@
 <script src="resources/js/bootstrap.bundle.js"></script>
 <script src="resources/js/jquery.min.js"></script>
 
+<link rel="shortcut icon" type="image/x-icon" href="resources/image/favicon.ico" />
+
 <style>
+        html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #nav {
+        background: rgba(0, 0, 0, 0.2);
+        transition: 500ms;
+        backdrop-filter: blur(10px);
+    }
+
+    #nav:hover {
+        background: rgba(0, 0, 0, 0.6);
+        transition: 500ms;
+    }
+
+    .reveal {
+        /* position: relative; */
+        transform: translateY(150px) scale(1.2, 1.2);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+
+    .reveal.active {
+        transform: translateY(0) scale(1, 1);
+        opacity: 1;
+    }
+
+    @keyframes turn {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    #expbtn:hover {
+        animation-name: turn;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    
     #back_top {
         display: block;
         width: 60px;
