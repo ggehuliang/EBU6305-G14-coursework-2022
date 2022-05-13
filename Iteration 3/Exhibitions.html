@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="resources/css/bootstrap.css">
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="resources/js/bootstrap.bundle.js"></script>
+<script src="resources/js/jquery.min.js"></script>
+
+<link rel="shortcut icon" type="image/x-icon" href="resources/image/favicon.ico" />
+
+<style>
+        html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #nav {
+        background: rgba(0, 0, 0, 0.2);
+        transition: 500ms;
+        backdrop-filter: blur(10px);
+    }
+
+    #nav:hover {
+        background: rgba(0, 0, 0, 0.6);
+        transition: 500ms;
+    }
+
+    .reveal {
+        /* position: relative; */
+        transform: translateY(150px) scale(1.2, 1.2);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+
+    .reveal.active {
+        transform: translateY(0) scale(1, 1);
+        opacity: 1;
+    }
+
+    @keyframes turn {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    #expbtn:hover {
+        animation-name: turn;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    
+    #back_top {
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        bottom: 50px;
+        right: 40px;
+        border-radius: 10px 10px 10px 10px;
+        text-decoration: none;
+        display: none;
+        background-color: #999999;
+    }
+
+    #back_top span {
+        display: block;
+        width: 60px;
+        color: #dddddd;
+        font-size: 40px;
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    #back_top span:hover {
+        color: #cccccc;
+    }
+</style>
+    <title>Shaanxi Museum Intro</title>
+
+</head>
+
+<body style="background-color:rgb(255, 248, 234)">
+    <nav class="navbar navbar-expand-md fixed-top" id="nav">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand" style="margin-left: 1em;">
+            <img src="resources/image/logo-red.png" width="32" height="32" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1"
+            aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation" id="expbtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-yin-yang"
+                viewBox="0 0 16 16">
+                <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z" />
+                <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z" />
+            </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li><a class="btn btn-primary" href="index.html" role="button" id="index"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Home</a>
+                </li>
+                <li><a class="btn btn-primary" href="Visiting.html" role="button" id="Visiting"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Visiting</a></li>
+                <li><a class="btn btn-primary" href="Exhibitions.html" role="button" id="Exhibitions"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Exhibitions</a></li>
+                <li><a class="btn btn-primary" href="Collections.html" role="button" id="Collections"
+                        style="background-color:rgb(127,50,34);margin-left: 5px;">Collections</a></li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <a href="Login.html" role="button" class="btn btn-outline-primary" style="margin-right: 1em;">Login</a>
+        </div>
+    </div>
+</nav>
+<script lang="javascript">
+    let url = window.location.pathname;
+    url = url.substring(url.lastIndexOf('/') + 1, url.length - 5);
+    document.getElementById(url).style.fontWeight = 'bold'
+    document.getElementById(url).style.textDecorationLine = 'underline'
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+</script>
+
+    <style>
+        .container{
+            text-align: center;
+        }
+
+        .mx-auto{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+
+        .text{
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: left;
+            font-size: x-large;
+            font-weight: 500;
+        }
+        .titletext{
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: left;
+            font-size: xx-large;
+            font-weight:bold;
+        }
+
+        .overalltitletext{
+            color:#9a735f;
+            text-align: left;
+            font-size: xx-large;
+            font-weight:bold;
+        }
+
+
+        a{
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: rgb(127,50,34)
+        }
+
+        img{
+            cursor:pointer;
+            transition:all 0.7s;
+        }
+
+        img:hover{
+            transform:scale(1.05);
+        }
+
+        <!-- .button {
+
+            width: 280px;
+            height: 70px;
+            border: #F0F0F0;
+            font-size: x-large;
+            color: rgb(0, 0, 0);
+            background-color: rgb(179, 177, 177);
+        } -->
+
+        .button_small {
+
+            width:250px;
+            height:70px;
+            border: #F0F0F0;
+            font-size: large;
+            color: rgb(0, 0, 0);
+            background-color: rgb(179, 177, 177);
+            
+        }
+
+        .zhanwei {
+            width:250px;
+            height:25px;
+            border: #F0F0F0;
+            font-size: large;
+            color: white;
+            background-color: white;
+        }
+    </style>
+
+    <div class="container">
+        <h1 c style="margin: 60px 0px; color: rgb(127,50,34)"><strong>Exhibition</strong></h1>
+        <div class="row g-3">
+            <!-- <div class="row g-4">
+                <div class="col-lg-3">
+                    <button class="button"><strong>Permanent Exhibition</strong></button>
+                </div>
+                <div class="col-lg-3">
+                    <button class="button"><strong>Special Exhibition</strong></button>
+                </div>
+                <div class="col-lg-3">
+                    <button class="button"><strong>Thematic Exhibition</strong></button>
+                </div>
+                <div class="col-lg-3">
+                    <button class="button"><strong>Virtual Exhibition</strong></button>
+                </div>
+            </div> -->
+            <p class="overalltitletext">
+                Permanent Exhibition
+            </p>
+         
+            <ul class="row g-3">
+
+                <div class="col-lg-4">
+                    <div style="border: 1px dashed rgb(127,50,34);">
+                        <a href="#"><img class="img-fluid" src="resources/image/ex1.jpg" alt="无法显示" title="First Exhibition Hall"> </a>
+                        <h1 style="height: 20px;"></h1>
+                        <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Tiger" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"></button> -->
+                        <!-- <a href="./exhi1.html"> -->
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#firstex">The First Exhibition Hall</button>
+                        <!-- </a> -->
+                        <br>
+                        <!--这里为了让按钮上下居中，不知道该咋写了.....-->
+                        <button class="zhanwei">The First Exhibition Hall</button>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex2.jpg" alt="无法显示" title="Second Exhibition Hall"> </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#Secondex">The Second Exhibition Hall</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex3.jpg" alt="无法显示" title="Third Exhibition Hall"> </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#Thirdex">The Third Exhibition Hall</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+                <p class="overalltitletext">
+                    
+                </p>
+                <p class="overalltitletext">
+                    Special Exhibition
+                </p>
+
+                <div class="col-lg-4">
+                    <div style="border: 1px dashed rgb(127,50,34);">
+                        <a href="#"><img class="img-fluid" src="resources/image/se1.png" alt="无法显示"> </a>
+                        <h1 style="height: 20px;"></h1>
+                        <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Tiger" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"></button> -->
+                        <!-- <a href="./exhi1.html"> -->
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#spex1">Fighting Against the Novel Coronavirus</button>
+                        <!-- </a> -->
+                        <br>
+                        <!--这里为了让按钮上下居中，不知道该咋写了.....-->
+                        <button class="zhanwei">The First Exhibition Hall</button>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/se2.png" alt="无法显示" > </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#spex2">Cultural Relics in the Liujiawa Cemetery</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/se3.png" alt="无法显示" > </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#spex3">Artefacts of the Zhou, Qin, HanTang Dynasties</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+
+          
+                <p class="overalltitletext">
+                    
+                </p>
+                <p class="overalltitletext">
+                    Thematic Exhibition
+                </p>
+
+                <div class="col-lg-4">
+                    <div style="border: 1px dashed rgb(127,50,34);">
+                        <a href="#"><img class="img-fluid" src="resources/image/te1.png" alt="无法显示"> </a>
+                        <h1 style="height: 20px;"></h1>
+                        <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal_Tiger" style="padding: 0px; border: 0px;"><img class="img-fluid" src="resources/image/Tiger.png" alt="无法显示" title="Bronze Tiger-Shaped Tally of Du County"></button> -->
+                        <!-- <a href="./exhi1.html"> -->
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#thex1">Mural Paintings of the Tang Dynasty</button>
+                        <!-- </a> -->
+                        <br>
+                        <!--这里为了让按钮上下居中，不知道该咋写了.....-->
+                        <button class="zhanwei">The First Exhibition Hall</button>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                        <div style="border: 1px dashed rgb(127,50,34);">
+                            <a href="#"><img class="img-fluid" src="resources/image/te2.png" alt="无法显示" > </a>
+                            <h1 style="height: 20px;"></h1>
+                            <button class="button_small"data-bs-toggle="modal" data-bs-target="#thex2">Treasures of the Great Tang Dynasty</button>
+                            <br>
+                            <button class="zhanwei">The First Exhibition Hall</button>
+                        </div>
+                </div>
+              
+                
+    </div>
+
+
+    <div class="modal fade" id="firstex" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>First Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    <ul class="row g-1">
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall1.jpg"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall2.jpg"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                  
+                        <p class="titletext">
+                            Prehistoric period
+                        </p>
+                        <p class="text">
+                            Situated in the Middle Yellow River, Shaanxi Province is reputed to be the birthplace of the Chinese 
+                            nationcradle of world civilizations. It was once inhabited by early hominids, as evidenced by the 
+                            archaeological discoveries of early Homo erectus remains such as the Lantian Manthe Dali Man. Other 
+                            important Neolithic sites in Shaanxi include Banpo, Jiangzhai, Yangguanzhai in central Shaanxi,Shimao 
+                            in northern Shaanxi. All these prehistoric sites reveal civilizational discourse from the dawn of civilization 
+                            to the thriving of the Chinese nation.
+                        </p>
+                 
+                        <br><br><br><br><br><br><br><br><br>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall3.jpg"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall4.jpg"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                  
+                        <p class="titletext">
+                            Zhou period
+                        </p>
+                        <p class="text">
+                            The Western Zhou Dynasty represents the 
+                            first state formation of early China. Its political systemeconomic
+                             structure as well as ethical ethos had profound impact on later period 
+                             dynasties. Just as what the Confucius highly complimented, ‘how completeelegant
+                              are the Zhou regulations. I will follow them’, as the capitalpolitical
+                             center of the Western Zhou Dynasty, Shaanxi owns abundant cultural relicsarchaeological remains from this period.
+                        </p>
+                        <br><br><br><br><br><br><br><br><br>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall5.jpg"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/firsthall6.jpg"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                  
+                        <p class="titletext">
+                            Qin period
+                        </p>
+                        <p class="text">
+                            The Qin people belonged to one of the clans of the Huaxia group.
+                             They lived around the present day Tianshui region of Gansu Province. 
+                             After the historical event of the King Ping of the Eastern Zhou Dynasty’s eastward migration in 770BC, 
+                             Qin people developed their economy in their homeland in Shaanxi. 
+                             In 221BC, Emperor Qin Shihuang annexed the other six feudal statesestablished the first unified and multi-national centralized state, 
+                             which had tremendous political, economic and military influences on the later period dynasties.
+                              The archaeological remains of Qin people, represented by the terracotta warriorshorses,
+                               characteristic of Qin people’s imposing grandeurdistinctive military power, vividly reflect the main sphere of the Qin culturethe spirits of the time.
+        
+                        </p>
+                        <br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="Secondex" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\ex21.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\ex22.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+                        <p class="titletext">
+                            The Han Dynasty
+                        </p>
+
+                        <p class="text">
+                            The Western Han Empire represented one of the heydays in ancient Chinese history. It founded its capital in Chang’an. As the starting point of the east-west trade route of the Silk Roads, Chang’an became the center of civilizationa prominent international metropolis in ancient East Asia. China emerged as a powerful country for the first time in the world. The archaeological discoveries of royalaristocratic tombs near Chang’an demonstrate the prosperity of the society, the colourful life of the people, the diversity of the art,the upbeat spirit of the people of the Han Empire.
+                        </p>
+                        <br><br><br>
+                        <!-- <div class="col-lg-10">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex23.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <img src="resources\image\ex23.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <p class="titletext">
+                            The Wei, Jin,SouthernNorthern Dynasties
+                        </p>
+                        <p class="text">
+                            China underwent a period of chaos and disunity with constant warfareturbulences from 220AD to 581AD, know in historical documents as the Wei, Jin,SouthernNorthern Dynasties. Minority ethnic groups in northern China contended with each other. The frequent immigration led to the integration of the agrarian culture with the nomadic culture. The Silk Roads continued to thrive during this period. The advance of Buddhism to the east greatly simulated the development of art.
+                        </p>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="Thirdex" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\ex31.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\ex32.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+                        <p class="titletext">
+                            The SuiTang dynasties
+                        </p>
+
+                        <p class="text">
+                            The SuiTang dynasties are the most glorious time in ancient China. Their capital Chang’an was the largestthe most prosperous metropolis in the contemporary world. The politics, economic and culture of the SuiTang dynasties were fully developed through the extensive contact with other civilizations. The cultural relics from these two dynasties are the manifestation of the inclusiveness of the erathe stunning achievements attained through great creativity.
+                        </p>
+                        <br><br><br>
+                        <!-- <div class="col-lg-10">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex23.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <img src="resources\image\ex33.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <p class="titletext">
+                            Shaanxi After the Tang Dynasty
+                        </p>
+                        <p class="text">
+                            After the Tang Dynasty, Shaanxi no longer held the position as the seat of the imperial capital of China since Chinese political center moved to the east of the country. However, as the political, economic,cultural center of northwest China, Shaanxi continued to play a leading role in creatinginheriting Chinese culture with unique characteristics.
+                        </p>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="spex1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\se1.png" width="483"   alt="无法显示" >
+    
+            
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+
+                        <br><br><br>
+                        <p class="text">
+                            Date: Sep. 25 - Nov. 25, 2020
+                        </p>
+
+                        <p class="text">
+                            Location: Exhibition Hall no. 5
+                        </p>
+                        <p class="text">
+                            Hosted by: China Relic Information Consultation Center
+                        </p>
+                        <p class="text">
+                            Organized by: the Shaanxi History Museum
+                        </p>
+                        <br><br><br>
+                        <!-- <div class="col-lg-10">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex23.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                      
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="spex2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\se2.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\se21.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\se22.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+
+                        <p class="text">
+                            Date: Jun. 15 - Oct. 11, 2020</p>
+                        <p class="text">
+                            Location: Exhibition Hall no. 7</p>
+                        <p class="text">
+                            Organized by: The Shaanxi History Museum, the Shaanxi Academy of Archaeology,the Bureau of CultureTourism of Chengcheng County
+
+
+                        </p>
+                    
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="spex3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\se2.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\se31.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\se32.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+
+                        <p class="text">
+                            Date: Jan. 10, 2020 - Mar. 28</p>
+                        <p class="text">
+                            Location: No. 7 Exhibition Hall</p>
+                        <p class="text">
+                            Hosted by: Shaanxi Provincial Cultural Heritage Administration, Tsinghua University
+
+                        </p>
+                    
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="thex1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\te1.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\te12.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+                        <img src="resources\image\te13.png" width="483"   alt="无法显示" >
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+
+                        <p class="text">
+                            The Tang Dynasty (618-907 AD) was the heyday of ancient China.</p>
+                        <p class="text">
+                            The paintings of the Tang Dynasty represented the highest level of artistic achievements which linked the preceding artthe following art. However, few paintings have survived the passing of time.</p>
+                        <p class="text">
+                            Since the 1950s, many paintings of landscapes, buildings, utensil, people, animalsplants have been found in the Tang Tombs, depicting the reality of life during the Tang Dynasty. These paintings provide a panoramic view for understanding the rituals of the imperial court as well as the architectural style of the period. Moreover, the customs of the peopletheir characteristics of dressinsights to their entertainment activities are also shown.
+
+                        </p>
+                        <p class="text"> The exhibition present nearly one hundred pieces of murals. They were selected from the museum’s rich collection of mural paintings which were unearthed from imperial tombsthe tombs of Tang nobles.</p>
+                    
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="thex2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p class="display-6" style="color: rgb(127,50,34); margin: 50px 0px;"><strong>Second Exhibition Hall</strong></p>
+                        </blockquote>
+                    </figure>
+                    
+                        <img src="resources\image\te21.png" width="483"   alt="无法显示" >
+                        <br><br><br>
+        
+                        <!-- <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex21.png"width="483" hieight="357"  alt="无法显示" title="Gold Dragons in Running Position"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#"><img class="img-fluid" src="resources/image/ex22.png"width="483" hieight="357"  alt="无法显示" title="Gilt Silver Plate in Double-Peach Shape with Double-Fox Design"> </a>
+                            <h1 style="height: 20px;"></h1>
+                        </div> -->
+                        <br><br><br>
+
+                        <p class="text">
+                            On October 5, 1970, two large urns, containing more than one thousand splendid gold, silver, jade, crystal, agateglass wares, were unearthed at Hejiacun village in the southern suburbs of Xian city, the place where the Xinghua fang grid of Chang’an city of the Tang dynasty was located. These objects won everybody’s admiration for the perfect integration of the bearing of the Great Tang dynastythe exotic style. Chinese archaeologists considered this discovery as a rival of "Treasures of Oxus River", the famous archaeological discovery known by the west, as well as one of the Significant Archaeological Discoveries of China during the Twentieth Century.</p>
+                        <p class="text">
+                            Since Hejiacun treasures were discovered, only a small part of them were displayed in this museum were invited to join the overseas tour exhibitions. Most of them were kept in the storehouses. When these treasures were buried? Who was the owner? Why they were buried? This exhibition presents the most complete set of the discovered treasures. We invite you to explore these riddlesshare the rare legacy of the great Tang Dynasty.
+
+                        </p>
+                    
+                    
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="page-section">
+    <div class="row justify-content-md-center align-items-center" style="margin:1em">
+        <div class="col-md-auto">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#MsgBox"
+                aria-expanded="false" aria-controls="MsgBox">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path
+                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                    <path fill-rule="evenodd"
+                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                </svg> Message Board</button>
+        </div>
+    </div>
+    <div id="MsgBox" class="collapse">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+
+                    <div class="row mt-3"></div>
+                    <div class="row mt-3"></div>
+
+
+                    <h2 class="mt-0">Please send us a message</h2>
+                    <hr class="divider">
+                    <p class="text-muted mb-5">If you have any suggestions on the maintenance of our cultural relics,
+                        please
+                        leave a message for us here, thank you very much for your contribution to the protection of
+                        cultural
+                        relics of the Chinese civilization!</p>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5  mb-5 justify-content-center">
+                <div class="col-lg-6">
+
+
+                    <div class="position-fixed top-0 middle p-3" style="z-index: 11;">
+                        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true"
+                            id="liveToast">
+                            <div class="d-flex">
+                                <div class="toast-body">
+                                    <p style="color: red;">Please input your email address and message before submit!
+                                    </p>
+                                </div>
+                                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Email address input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" type="email" placeholder="name@example.com">
+                        <label for="email">Email address</label>
+                    </div>
+
+                    <!-- Message input-->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."
+                            style="height: 10rem"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton"
+                            onclick="submitCmt()">Submit</button></div>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                    <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                    <div>Latest Comments</div>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5  mb-5 justify-content-center" id="msgs">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">EBU6305-G14-coursework-2022</div>
+    </div>
+</footer>
+<!-- 点击快速返回页面顶部 -->
+<div id="article">
+    <a id="back_top"><span>⌆</span></a>
+</div>
+<script>
+    $(function () {
+        $(window).scroll(function () {  //只要窗口滚动,就触发下面代码 
+            var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+            if (scrollt > 100) {  //判断滚动后高度超过100px,就显示  
+                $("#back_top").fadeIn(400); //淡出     
+            } else {
+                $("#back_top").stop().fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动   
+            }
+        });
+        $("#back_top").click(function () { //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部
+            $("html,body").animate({ scrollTop: "0px" }, 200);
+        });
+    });
+    let localComments = JSON.parse(window.localStorage.comment ?? '[]')
+    function formatDate(time, format = 'YY-MM-DD hh:mm:ss') {
+        var date = new Date(time);
+
+        var year = date.getFullYear(),
+            month = date.getMonth() + 1,//月份是从0开始的
+            day = date.getDate(),
+            hour = date.getHours(),
+            min = date.getMinutes(),
+            sec = date.getSeconds();
+        var preArr = Array.apply(null, Array(10)).map(function (elem, index) {
+            return '0' + index;
+        });
+
+        var newTime = format.replace(/YY/g, year)
+            .replace(/MM/g, preArr[month] || month)
+            .replace(/DD/g, preArr[day] || day)
+            .replace(/hh/g, preArr[hour] || hour)
+            .replace(/mm/g, preArr[min] || min)
+            .replace(/ss/g, preArr[sec] || sec);
+
+        return newTime;
+    }
+    function setComments() {
+        const msgs = $('#msgs')
+        msgs.empty()
+        localComments.forEach(element => {
+            const emailAddr = element.emailAddr
+            const text = element.text
+            const time = formatDate(element.time)
+            msgs.append(`<div class="card w-50" style="margin: 0.5rem">
+                    <div class="card-header">
+                        ${emailAddr}
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">${text}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <div style="text-align: right;">${time}</div>
+                    </div>
+                </div>`)
+        });
+    }
+    setComments()
+    function submitCmt() {
+        const email = $('#email').val()
+        const msg = $('#message').val()
+        if (!email || !msg) {
+            (new bootstrap.Toast(document.getElementById('liveToast'))).show()
+        } else {
+            localComments.push({ emailAddr: email, text: msg, time: Date.now() })
+            window.localStorage.setItem("comment", JSON.stringify(localComments))
+            setComments()
+        }
+    }
+</script>
+</body>
+
+</html>
